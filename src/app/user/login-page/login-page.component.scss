@@ -1,0 +1,9 @@
+main {
+  height: calc(100% - 64px);
+  display: grid;
+  place-items: center;
+}
+
+.login-btn-img {
+  height: 20px;
+}

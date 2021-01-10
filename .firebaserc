@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "myapp-bc11c": {
+      "hosting": {
+        "EAG-kanban": [
+          "myapp-bc11c"
+        ]
+      }
+    }
+  }
+}

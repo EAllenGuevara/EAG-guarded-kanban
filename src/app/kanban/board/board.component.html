@@ -1,0 +1,50 @@
+<mat-card class="outer-card">
+  <mat-card-header>
+    <!-- Drag handle -->
+    <ng-content></ng-content>
+    <mat-card-title class="board-title">
+      {{ board.title }}
+    </mat-card-title>
+    <app-delete-btn
+      class="delete-board-icon"
+      [name]="board.title"
+      (delete)="handleDeleteBoard()"
+    ></app-delete-btn>
+  </mat-card-header>
+  <div
+    class="tasks"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="taskDrop($event)"
+  >
+    <div
+      class="inner-card"
+      cdkDrag
+      *ngFor="let task of board.tasks; let i = index"
+    >
+      <mat-card [ngClass]="task.label">
+        {{ task.description }}
+        <button
+          mat-icon-button
+          aria-label="Edit task"
+          (click)="openDialog(task, i)"
+        >
+          <mat-icon class="task-icon">edit</mat-icon>
+        </button>
+        <app-delete-btn
+          class="delete-task-icon"
+          [name]="task.description"
+          (delete)="handleDeleteTask(task)"
+        ></app-delete-btn>
+      </mat-card>
+    </div>
+    <div *ngIf="board.tasks.length < 1" class="tasks-placeholder">
+      No tasks added
+    </div>
+    <div class="add-board-wrap">
+      <button mat-button color="primary" (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-card>

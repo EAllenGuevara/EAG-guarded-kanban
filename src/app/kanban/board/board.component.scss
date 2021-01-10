@@ -1,0 +1,86 @@
+.outer-card {
+  margin: 10px;
+  min-width: 350px;
+  max-width: 350px;
+  padding: 20px 10px;
+}
+
+.board-title {
+  max-width: 260px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.delete-board-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.tasks-placeholder {
+  height: 70px;
+  display: grid;
+  place-content: center;
+  font-style: italic;
+  color: lightgray;
+}
+
+.add-board-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.inner-card {
+  margin: 5px 0;
+}
+
+.delete-task-icon {
+  float: right;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.5;
+}
+
+.cdk-drag-animating {
+  transition: transform 300ms ease;
+}
+
+.tasks.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 300ms ease;
+}
+
+.task-icon {
+  font-size: 1rem;
+}
+
+.blue-a {
+  // background-color: rgb(95, 95, 248);
+  background-color: #6467e8;
+  color: white;
+}
+
+.blue-b {
+  background-color: #6890f2;
+  color: white;
+}
+
+.blue-c {
+  background-color: #69a7db;
+  color: white;
+}
+
+.blue-d {
+  background-color: #68d8f2;
+}
+
+.blue-e {
+  background-color: #64e8dd;
+}
+
+.gray {
+  background-color: gray;
+  color: white;
+  text-decoration-line: line-through;
+}
