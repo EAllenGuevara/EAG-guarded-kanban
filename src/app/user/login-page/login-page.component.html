@@ -1,5 +1,6 @@
 <main>
   <div *ngIf="!(angularFireAuth.authState | async)">
+    <h3>Please login to access your kanban boards.</h3>
     <button mat-raised-button appGoogleSignin>
       <img class="login-btn-img" src="/assets/google-logo.svg" /> Login with
       Google

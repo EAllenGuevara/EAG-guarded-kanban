@@ -2,6 +2,10 @@ main {
   height: calc(100% - 64px);
   display: grid;
   place-items: center;
+
+  div {
+    display: grid;
+  }
 }
 
 .login-btn-img {
