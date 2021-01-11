@@ -7,5 +7,5 @@ export interface Board {
 
 export interface Task {
   description?: string;
-  label?: 'purple' | 'blue' | 'green' | 'yellow' | 'red' | 'gray';
+  label?: 'blue-a' | 'blue-b' | 'blue-c' | 'blue-d' | 'blue-e' | 'gray';
 }

@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { BoardService } from '../board.service';
 
 @Component({
   selector: 'app-task-dialog',
@@ -29,6 +28,7 @@ import { BoardService } from '../board.service';
       </mat-button-toggle-group>
     </div>
     <div mat-dialog-actions>
+      <button mat-button (click)="onCancel()">Cancel</button>
       <button
         mat-button
         [mat-dialog-close]="data"
@@ -41,16 +41,18 @@ import { BoardService } from '../board.service';
   `,
   styleUrls: ['./task-dialog.component.scss'],
 })
+/**
+ * Create and update task dialog
+ */
 export class TaskDialogComponent {
-  // labelOptions = ['blue', 'purple', 'orange', 'yellow', 'red', 'gray'];
+  // corresponding CSS classes found in task-dialog.component.scss and board.component.scss
   labelOptions = ['blue-a', 'blue-b', 'blue-c', 'blue-d', 'blue-e', 'gray'];
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialogRef: MatDialogRef<TaskDialogComponent>,
-    private boardService: BoardService
+    public dialogRef: MatDialogRef<TaskDialogComponent>
   ) {}
 
-  onNoClick(): void {
+  onCancel(): void {
     this.dialogRef.close();
   }
 }

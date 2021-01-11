@@ -4,7 +4,6 @@ import {
   CanActivate,
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-  UrlTree,
 } from '@angular/router';
 import { SnackService } from '../services/snack.service';
 

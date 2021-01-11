@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 import { DeleteDialogComponent } from '../../kanban/dialogs/delete-dialog.component';
 
@@ -15,8 +15,12 @@ import { DeleteDialogComponent } from '../../kanban/dialogs/delete-dialog.compon
       <mat-icon>clear</mat-icon>
     </button>
   `,
-  styleUrls: ['./delete-btn.component.scss'],
+  styles: [],
 })
+/**
+ * Opens delete confirmation dialog for tasks and boards
+ * and emits delete event to continue with deletion
+ */
 export class DeleteBtnComponent {
   canDelete: boolean;
   @Input() name: string;

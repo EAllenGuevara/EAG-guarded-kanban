@@ -11,12 +11,14 @@
       (delete)="handleDeleteBoard()"
     ></app-delete-btn>
   </mat-card-header>
+  <!-- Board -->
   <div
     class="tasks"
     cdkDropList
     cdkDropListOrientation="vertical"
     (cdkDropListDropped)="taskDrop($event)"
   >
+    <!-- Tasks -->
     <div
       class="inner-card"
       cdkDrag
@@ -38,10 +40,12 @@
         ></app-delete-btn>
       </mat-card>
     </div>
+    <!-- Task placeholder -->
     <div *ngIf="board.tasks.length < 1" class="tasks-placeholder">
       No tasks added
     </div>
-    <div class="add-board-wrap">
+    <!-- Add task button -->
+    <div class="add-task-wrap">
       <button mat-button color="primary" (click)="openDialog()">
         <mat-icon>add</mat-icon>
       </button>

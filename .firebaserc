@@ -1,9 +1,9 @@
 {
   "targets": {
-    "myapp-bc11c": {
+    "eag-sample-22b01": {
       "hosting": {
         "EAG-kanban": [
-          "myapp-bc11c"
+          "eag-sample-22b01"
         ]
       }
     }

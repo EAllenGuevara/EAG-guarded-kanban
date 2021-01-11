@@ -12,7 +12,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
       </mat-form-field>
     </div>
     <div mat-dialog-actions>
-      <button mat-button (click)="onNoClick()">Cancel</button>
+      <button mat-button (click)="onCancel()">Cancel</button>
       <button mat-button [mat-dialog-close]="data.title" cdkFocusInitial>
         Create
       </button>
@@ -20,13 +20,16 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   `,
   styles: [],
 })
+/**
+ * Dialog for board creation
+ */
 export class BoardDialogComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<BoardDialogComponent>
   ) {}
 
-  onNoClick(): void {
+  onCancel(): void {
     this.dialogRef.close();
   }
 }

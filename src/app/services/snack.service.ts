@@ -9,6 +9,9 @@ import { tap } from 'rxjs/operators';
 export class SnackService {
   constructor(private router: Router, private snackBar: MatSnackBar) {}
 
+  /**
+   * Show error when user tries to access a protected route without auth
+   */
   authError() {
     this.snackBar.open('You must be logged in!', 'Ok', { duration: 3000 });
 

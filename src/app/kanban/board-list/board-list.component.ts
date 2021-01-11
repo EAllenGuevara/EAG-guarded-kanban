@@ -28,6 +28,10 @@ export class BoardListComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
 
+  /**
+   * Update boards array on drop event
+   * @param {Event} event
+   */
   drop(event: CdkDragDrop<string[]>) {
     // helper method to sort boards on UI
     moveItemInArray(this.boards, event.previousIndex, event.currentIndex);

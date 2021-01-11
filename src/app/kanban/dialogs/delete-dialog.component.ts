@@ -9,7 +9,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
       <p>Delete {{ data.name }}?</p>
     </div>
     <div mat-dialog-actions>
-      <button mat-button (click)="onNoClick()">Cancel</button>
+      <button mat-button (click)="onCancel()">Cancel</button>
       <button
         mat-button
         color="warn"
@@ -22,13 +22,16 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   `,
   styles: [],
 })
+/**
+ * Deletion confirmation dialog
+ */
 export class DeleteDialogComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<DeleteDialogComponent>
   ) {}
 
-  onNoClick(): void {
+  onCancel(): void {
     this.dialogRef.close();
   }
 }
